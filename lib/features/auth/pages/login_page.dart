@@ -4,6 +4,7 @@ import 'package:flutte_todo/common/widgets/appstyle.dart';
 import 'package:flutte_todo/common/widgets/custom_otn_btn.dart';
 import 'package:flutte_todo/common/widgets/custom_text.dart';
 import 'package:flutte_todo/common/widgets/reusable.dart';
+import 'package:flutte_todo/features/auth/pages/otp_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -92,8 +93,16 @@ class _LoginPageState extends ConsumerState<LoginPage> {
               ),
               const Gap(20),
               CustomOtnlnBtn(
-                  width: AppConst.kWidth * .85,
-                  height: AppConst.kHieght * .07,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const OtpPage(),
+                      ),
+                    );
+                  },
+                  width: AppConst.kWidth * .9,
+                  height: AppConst.kHieght * .075,
                   color: AppConst.kBkDark,
                   color2: AppConst.kLight,
                   text: "코드 보내기"),

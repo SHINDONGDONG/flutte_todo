@@ -1,5 +1,5 @@
 import 'package:flutte_todo/common/utils/constants.dart';
-import 'package:flutte_todo/features/onboarding/pages/onboarding.dart';
+import 'package:flutte_todo/features/todo/pages/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: AppConst.kBkDark,
               useMaterial3: true,
             ),
-            home: const OnBoarding(),
+            home: const HomePage(),
           );
         });
   }
