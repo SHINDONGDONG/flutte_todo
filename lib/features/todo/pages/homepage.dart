@@ -3,6 +3,7 @@ import 'package:flutte_todo/common/widgets/appstyle.dart';
 import 'package:flutte_todo/common/widgets/custom_text.dart';
 import 'package:flutte_todo/common/widgets/reusable.dart';
 import 'package:flutte_todo/common/widgets/xpansion_tile.dart';
+import 'package:flutte_todo/features/todo/widget/todo_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
@@ -172,7 +173,18 @@ class _HomePageState extends ConsumerState<HomePage>
                       Container(
                         color: AppConst.kGreen,
                         height: AppConst.kHieght * .3,
-                        child: const Text("보류"),
+                        child: ListView(
+                          children: [
+                            TodoTitle(
+                              start: "3:00",
+                              end: "05:00",
+                              switcher:
+                                    Switch(
+                                        value: true,
+                                        onChanged: (value) {}),
+                              ),
+                          ],
+                        )
                       ),
                       Container(
                         color: AppConst.kBkLight,
